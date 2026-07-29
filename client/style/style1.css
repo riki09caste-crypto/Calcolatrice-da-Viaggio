@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+header {
+  background-color: rgb(11, 92, 24);
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+  margin: 0px 0px 10px 0px
+}
+
+p.welcome-message {
+  font-size: 18px;
+  margin: 0px 10px 20px 10px;
+  text-align: justify;
+}
+
+h2 {
+  color: rgb(11, 92, 24);
+  margin: 0px 10px 10px 10px;
+}
+
+p.fuel-mode-description {
+  font-size: 16px;
+  margin: 0px 10px 20px 10px;
+  text-align: justify;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 0px 10px 20px 30px;
+}
+
+section.fuel-mode-result-description {
+  font-size: 16px;
+  margin: 0px 10px 20px 10px;
+  text-align: justify;
+}
+
+section.currency-mode-result-description {
+  font-size: 16px;
+  margin: 0px 10px 20px 10px;
+  text-align: justify;
+}
+
+p.currency-mode-description {
+  font-size: 16px;
+  margin: 0px 10px 20px 10px;
+  text-align: justify;
+}
+
+div.Contenitore-modalità {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  gap: 40px;
+  max-width: 1000px;
+}
+
+div.scheda-modalità {
+  background-color: rgb(11, 92, 24);
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+#distance,
+#consumption,
+#fuelPrice,
+#calculateFuel {
+  margin-bottom: 10px;
+}
+
+#amount,
+#fromCurrency,
+#toCurrency,
+#calculateCurrency {
+  margin-bottom: 10px;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+footer {
+  color: rgb(11, 92, 24);
+  text-align: center;
+}

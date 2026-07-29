@@ -2,33 +2,139 @@
 <html lang="it">
 
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/x-icon" href="img/LogoSocietà.png">
-  <title>ASD Pedale Sammaurese</title>
+  <title>Calcolatrice da Viaggio</title>
+  <link rel="stylesheet" href="style/style1.css">
+  <link rel="icon" href="img/icon.png" type="image/png">
 </head>
 
 <body>
-  <header>
-    <h1>ASD Pedale Sammaurese</h1>
+  <script src="script/script1.js"></script>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="chi-siamo.html">Chi siamo</a></li>
-        <li><a href="attivita.html">Attività</a></li>
-        <li><a href="contatti.html">Contatti</a></li>
-      </ul>
-    </nav>
+  <header align="center">
+    <h1>🌐 Calcolatrice di Spese di Viaggio: Gestione Carburante & Cambiovaluta</h1>
   </header>
 
+
   <main>
-    
+    <p class="welcome-message">
+      Benvenuto nella <b>Calcolatrice di Spese di Viaggio</b>, lo strumento digitale definitivo progettato per
+      semplificare la
+      pianificazione finanziaria e la logistica di ogni tuo spostamento, sia esso un viaggio di lavoro aziendale o una
+      trasferta personale.Questa applicazione unisce due strumenti fondamentali in un'unica interfaccia leggera, veloce
+      e
+      intuitiva, operando interamente sul lato client per garantirti la massima velocità di calcolo senza tempi di
+      attesa.
+      Grazie alla sua struttura modulare, l'applicazione si divide in due modalità di utilizzo principali, selezionabili
+      istantaneamente con un semplice clic.
+    </p>
+
+    <h2>1. Modalità Gestione Carburante (Ottimizzazione dei Costi del Veicolo)</h2>
+
+
+    <p class="fuel-mode-description">
+      Questa modalità è progettata per monitorare e prevedere con precisione chirurgica l'impatto economico degli
+      spostamenti su strada. Inserendo pochi e semplici dati, l'algoritmo JavaScript elabora istantaneamente il budget
+      necessario per il carburante.
+
+    <ul>
+      <li><b>Distanza da Percorrere:</b> L'utente inserisce i chilometri totali previsti per l'itinerario (incluso
+        l'eventuale
+        ritorno).</li>
+
+      <li><b>Consumo Medio del Veicolo:</b> Consente di specificare l'efficienza del mezzo
+        espresso in litri ogni 100 chilometri (<i>L/100 km</i>) oppure in chilometri per litro (<i>km/L</i>).</li>
+
+      <li><b>Prezzo del Carburante:</b> Permette di inserire il costo attuale al litro della benzina, del diesel, del
+        GPL
+        o del metano.</li>
+
+    </ul>
+
+    <section class="fuel-mode-result-description">
+      <b>Il Risultato Visivo:</b>
+      L'applicazione mostra immediatamente sullo schermo il quantitativo esatto di carburante richiesto per coprire
+      l'intera tratta e la spesa economica totale stimata. Questo permette alle imprese di calcolare i rimborsi
+      chilometrici dei dipendenti e ai privati di ripartire le spese di viaggio in modo equo.
+    </section>
+    </p>
+
+
+    <h2>2. Modalità Conversione Denaro (Strumento Cambiovaluta Internazionale)</h2>
+
+    <p class="currency-mode-description">
+      La seconda modalità abbatte le barriere valutarie durante i viaggi internazionali. Pensata per chi si sposta
+      all'estero per meeting, fiere o vacanze, questa sezione offre una panoramica chiara e immediata sul potere
+      d'acquisto della propria moneta fuori dai confini nazionali.
+
+    <ul>
+
+      <li><b>Inserimento dell'Importo:</b> L'utente digita la cifra numerica che desidera convertire.</li>
+
+      <li><b>Selezione delle Valute:</b> Attraverso due menu a tendina dinamici, è possibile impostare la valuta di
+        partenza
+        (es.
+        Euro €) e la valuta di destinazione (es. Dollaro Americano $, Sterlina
+        Britannica £, Yen Giapponese ¥).
+      </li>
+    </ul>
+
+    <section class="currency-mode-result-description">
+      <b>Il Risultato Visivo:</b>
+      Il sistema elabora il calcolo mostrando ilvalore convertito con la corretta formattazione dei simboli monetari e
+      dei
+      decimali. Attualmente l'applicazione effettua il calcolo basandosi su tassi di cambio locali memorizzati (ideale
+      per
+      l'utilizzo offline), gettando le basi ideali per la futura integrazione con API bancarie e database lato server
+      per
+      aggiornamenti in tempo reale.
+      </p>
+
+      <br>
+      <div class="Contenitore-modalità">
+
+        <div class="scheda-modalità">
+          <h3>Modalità Gestione Carburante</h3>
+
+          Inserisci la distanza (km): <input type="number" id="distance" placeholder="Distanza (km)"> <br>
+          Inserisci il consumo medio (L/100 km): <input type="number" id="consumption"
+            placeholder="Consumo Medio (L/100 km)">
+          <br>
+          Inserisci il prezzo del carburante (€/L): <input type="number" id="fuelPrice"
+            placeholder="Prezzo Carburante (€/L)">
+          <br>
+          <button id="calculateFuel">Calcola Spesa Carburante</button>
+        </div>
+
+
+        <div class="scheda-modalità">
+          <h3>Modalità Conversione Denaro</h3>
+          Inserisci l'importo da convertire: <input type="number" id="amount" placeholder="Importo">
+          <br>
+          <label for="fromCurrency">Da:</label>
+          <select id="fromCurrency">
+            <option value="EUR">Euro (€)</option>
+            <option value="USD">Dollaro Americano ($)</option>
+            <option value="GBP">Sterlina Britannica (£)</option>
+            <option value="JPY">Yen Giapponese (¥)</option>
+          </select>
+          <br>
+          <label for="toCurrency">A:</label>
+          <select id="toCurrency">
+            <option value="EUR">Euro (€)</option>
+            <option value="USD">Dollaro Americano ($)</option>
+            <option value="GBP">Sterlina Britannica (£)</option>
+            <option value="JPY">Yen Giapponese (¥)</option>
+          </select>
+          <br>
+          <button id="calculateCurrency">Calcola Conversione</button>
+        </div>
+      </div>
   </main>
 
+  <hr>
   <footer>
-
+    <p>&copy; 2026 Calcolatrice di Spese di Viaggio. Tutti i diritti riservati. Just_Me (GitHub)</p>
   </footer>
-
 </body>
 
 </html>
