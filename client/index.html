@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <script src="script/script1.js"></script>
+
 
   <header align="center">
     <h1>🌐 Calcolatrice di Spese di Viaggio: Gestione Carburante & Cambiovaluta</h1>
@@ -103,7 +103,29 @@
           Inserisci il prezzo del carburante (€/L): <input type="number" id="fuelPrice"
             placeholder="Prezzo Carburante (€/L)">
           <br>
-          <button id="calculateFuel" onclick="calculate()">Calcola Spesa Carburante</button>
+          <button id="calculateFuel" onclick="carburante()">Calcola Spesa Carburante</button>
+
+          <div class="Storico-box">
+
+            <h4 align="center">Storico delle Spese di Carburante</h4>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Distanza (km)</th>
+                  <th>Consumo (Km/L)</th>
+                  <th>Prezzo (€/L)</th>
+                  <th>Spesa Totale (€)</th>
+                </tr>
+              </thead>
+              <tbody id="tabella-carburante">
+
+
+
+              </tbody>
+
+            </table>
+          </div>
         </div>
 
 
@@ -127,15 +149,43 @@
             <option value="JPY">Yen Giapponese (¥)</option>
           </select>
           <br>
-          <button id="calculateCurrency">Calcola Conversione</button>
+          <button id="calculateCurrency" onclick="denaro()">Calcola Conversione</button>
+
+          <div class="Storico-box">
+
+            <h4 align="center">Storico delle Conversioni</h4>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Importo</th>
+                  <th>Valuta di Partenza</th>
+                  <th>Valuta di Destinazione</th>
+                  <th>Valore Convertito</th>
+                </tr>
+              </thead>
+              <tbody id="tabella-conversione">
+
+
+
+              </tbody>
+
+            </table>
+          </div>
         </div>
       </div>
+
+    
+
+
   </main>
 
   <hr>
   <footer>
     <p>&copy; 2026 Calcolatrice di Spese di Viaggio. Tutti i diritti riservati. Just_Me (GitHub)</p>
   </footer>
+
+  <script src="script/script1.js"></script>
 </body>
 
 </html>
